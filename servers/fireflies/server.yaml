@@ -1,0 +1,22 @@
+name: fireflies
+type: remote
+dynamic:
+  tools: true
+meta:
+  category: productivity
+  tags:
+    - productivity
+    - meetings
+    - transcription
+    - remote
+about:
+  title: Fireflies.ai
+  description: Search and analyze meeting transcripts, summaries, soundbites and analytics from Fireflies.ai
+  icon: https://fireflies.ai/icon.png
+remote:
+  transport_type: streamable-http
+  url: https://api.fireflies.ai/mcp
+oauth:
+  - provider: fireflies
+    secret: fireflies.personal_access_token
+    env: FIREFLIES_PERSONAL_ACCESS_TOKEN
