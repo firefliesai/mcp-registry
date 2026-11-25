@@ -1,1 +1,1 @@
-Docs: https://fireflies.ai/blog/fireflies-mcp-server
+Docs: https://docs.fireflies.ai/mcp-tools/overview

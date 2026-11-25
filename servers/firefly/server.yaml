@@ -10,9 +10,9 @@ meta:
     - transcription
     - remote
 about:
-  title: Firefly
-  description: Transcribe, summarize, and analyze meetings with AI-powered note-taking across video conferencing platforms
-  icon: https://www.google.com/s2/favicons?domain=fireflies.ai&sz=64
+  title: Fireflies.ai
+  description: Search, analyze and manage Fireflies.ai meetings, transcripts, summaries, soundbites and uploads
+  icon: https://fireflies.ai/icon.png
 remote:
   transport_type: streamable-http
   url: https://api.fireflies.ai/mcp
