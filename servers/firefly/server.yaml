@@ -1,4 +1,4 @@
-name: fireflies
+name: firefly
 type: remote
 dynamic:
   tools: true
@@ -17,6 +17,6 @@ remote:
   transport_type: streamable-http
   url: https://api.fireflies.ai/mcp
 oauth:
-  - provider: fireflies
-    secret: fireflies.personal_access_token
-    env: FIREFLIES_PERSONAL_ACCESS_TOKEN
+  - provider: firefly
+    secret: firefly.personal_access_token
+    env: FIREFLY_PERSONAL_ACCESS_TOKEN
