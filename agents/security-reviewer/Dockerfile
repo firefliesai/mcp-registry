@@ -21,7 +21,7 @@ RUN go build -o /security-reviewer/build/proxy ./proxy
 
 
 # Supply the patched Node runtime separately from the Debian runtime user setup.
-FROM node:22.23.4-trixie-slim AS node-runtime
+FROM node:26.13.1-trixie-slim AS node-runtime
 
 # Use a debian image to host the agent.
 FROM debian:trixie-slim AS reviewer-image
@@ -41,6 +41,7 @@ RUN apt-get update \
         git \
         gnupg \
         jq \
+        libatomic1 \
         libstdc++6 \
         ripgrep \
         unzip \
