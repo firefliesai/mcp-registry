@@ -17,12 +17,13 @@ There are two Go modules in this repo:
 - [Task](https://taskfile.dev/) v3 for `Taskfile.yml` wrappers. Every Go task can also run directly with `go run ./cmd/<name>` or `go test ./...`.
 - Docker Engine, Docker Buildx, and Docker Compose for building local server images (`task build`, `task create`, `task clean`) and running `agents/security-reviewer`.
 - The `docker mcp` CLI plugin is only needed for `task import` and `task reset`.
-- No `load-env`, package install step, or pre-commit hooks are configured in this repo.
+- Node.js with npm (`npx`) for `task validate`, which runs `npx --yes prettier --check` on `server.yaml` (downloading Prettier on first use).
+- No `load-env`, root package install step, or pre-commit hooks are configured in this repo.
 
 ## Build, vet, test, and validate
 
 Run commands from the repo root unless a command changes directory.
-All commands below were verified locally without credentials.
+The commands in this section, except `task clean`, were verified locally without credentials.
 
 Root module build, vet, and unit tests (only `cmd/validate/main_test.go` currently has tests):
 
@@ -64,7 +65,7 @@ task catalog -- firefly
 
 To clean generated catalog and Docker artifacts for a server, run `task clean -- firefly` (replacing `firefly` with the server name). Note that `cmd/clean` also runs `docker builder prune --force` and `docker image prune --force` globally on the host, so this command was not run locally.
 
-There is no separate Go linter config (such as `.golangci.yml`) or JS/TS toolchain in this repo.
+There is no separate Go linter config (such as `.golangci.yml`) in this repo. YAML formatting is checked via Prettier inside `task validate`.
 
 ## Commands and workflows that need credentials
 
